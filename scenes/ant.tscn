@@ -1,0 +1,96 @@
+[gd_scene load_steps=12 format=3 uid="uid://fxahqc1b14vo"]
+
+[ext_resource type="Script" uid="uid://1vpf048mdcgx" path="res://ant.gd" id="1_5njhu"]
+[ext_resource type="Texture2D" uid="uid://djo3jw5g87k6j" path="res://sprites/felix/FHF.png" id="1_7nvtx"]
+[ext_resource type="Texture2D" uid="uid://31452u278msd" path="res://sprites/felix/FHSL.png" id="2_lv1r1"]
+[ext_resource type="Texture2D" uid="uid://bgxd4qyo0cvra" path="res://sprites/felix/FHSR.png" id="3_ry7hg"]
+[ext_resource type="Texture2D" uid="uid://dy5o3cdxnqmvm" path="res://sprites/felix/FNF.png" id="4_db5ec"]
+[ext_resource type="Texture2D" uid="uid://bbwsbmxn8gsmn" path="res://sprites/felix/FNSL.png" id="5_1hgev"]
+[ext_resource type="Texture2D" uid="uid://dol13nvw0fuex" path="res://sprites/felix/FNSR.png" id="6_5p3op"]
+[ext_resource type="Texture2D" uid="uid://cvvmp0tspdqic" path="res://sprites/felix/FUF.png" id="7_0eb45"]
+[ext_resource type="Texture2D" uid="uid://ce586hrwg6oix" path="res://sprites/felix/FUSL.png" id="8_hr5jw"]
+[ext_resource type="Texture2D" uid="uid://bkoqdytngdt3f" path="res://sprites/felix/FUSR.png" id="9_5jsn8"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ekys6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7nvtx")
+}],
+"loop": true,
+"name": &"happy_forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lv1r1")
+}],
+"loop": true,
+"name": &"happy_side_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ry7hg")
+}],
+"loop": true,
+"name": &"happy_side_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_db5ec")
+}],
+"loop": true,
+"name": &"neutral_forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1hgev")
+}],
+"loop": true,
+"name": &"neutral_side_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_5p3op")
+}],
+"loop": true,
+"name": &"neutral_side_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_0eb45")
+}],
+"loop": true,
+"name": &"unhappy_forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_hr5jw")
+}],
+"loop": true,
+"name": &"unhappy_side_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_5jsn8")
+}],
+"loop": true,
+"name": &"unhappy_side_right",
+"speed": 5.0
+}]
+
+[node name="Ant" type="Node2D"]
+script = ExtResource("1_5njhu")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.043, 0.043)
+sprite_frames = SubResource("SpriteFrames_ekys6")
+animation = &"neutral_side_left"
+autoplay = "neutral_side_left"

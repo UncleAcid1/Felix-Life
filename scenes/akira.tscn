@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2fqptx3corit"]
+
+[ext_resource type="Texture2D" uid="uid://cej46phwntif1" path="res://sprites/akira/AIDLE.png" id="1_7xx5d"]
+[ext_resource type="Texture2D" uid="uid://bifdokkstgbvn" path="res://sprites/akira/AWONE.png" id="2_vo2rs"]
+[ext_resource type="Texture2D" uid="uid://d3m5km2q5aqn7" path="res://sprites/akira/AWTWO.png" id="3_a1x0k"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nmlys"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7xx5d")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_vo2rs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_7xx5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a1x0k")
+}],
+"loop": true,
+"name": &"Walking",
+"speed": 5.0
+}]
+
+[node name="Akira" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.08, 0.08)
+sprite_frames = SubResource("SpriteFrames_nmlys")
+animation = &"Idle"
